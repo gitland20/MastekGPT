@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mastek</title>
+  <link rel="stylesheet" href='style.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts Link For Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <p style="text-align: center;"><i>MAI - MASTEK ANOMALY INTELLIGENCE with GPT-3.5 Model</i></p>
+    <img src="mastek.png" alt="cmpy_img" width="100px" height="25px" style="padding-left:10px">
+    <div class="search-bar">
+      <form id="queryForm" onsubmit="return false">
+        <div class="textarea-container">
+            <div class="input-box">
+                <p><small><i>&ensp;Please enter to ask</i></small></p>
+                <textarea id="sql_query" name="sql_query" placeholder="Try Questions..."></textarea>
+                <button type="submit" id="send-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 24 18">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </form>
+    
+    </div>
+
+    <div class="output-label">
+      <div class="output-box">
+        <p><i>Here are the results</i></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const textarea = document.getElementById('sql_query');
+    textarea.addEventListener('input', function () {
+      this.style.height = '20px'; // Initial height
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+  </script>
+</body>
+</html>
